@@ -1,0 +1,904 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop UltraSlim 15",
+      "description": "Laptop delgado con pantalla FHD de 15 pulgadas y procesador de última generación.",
+      "price": 1299.99,
+      "stock": 45,
+      "category": "Electrónica",
+      "createdAt": "2024-01-10T00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "Mouse Inalámbrico Pro",
+      "description": "Mouse ergonómico inalámbrico con batería de larga duración y DPI ajustable.",
+      "price": 49.99,
+      "stock": 200,
+      "category": "Accesorios",
+      "createdAt": "2024-01-12T00:00:00"
+    },
+    {
+      "id": 3,
+      "name": "Teclado Mecánico RGB",
+      "description": "Teclado mecánico con switches Cherry MX e iluminación RGB personalizable.",
+      "price": 89.99,
+      "stock": 130,
+      "category": "Accesorios",
+      "createdAt": "2024-01-15T00:00:00"
+    },
+    {
+      "id": 4,
+      "name": "Monitor 27\" 4K",
+      "description": "Monitor 4K UHD con panel IPS y tiempo de respuesta de 1ms.",
+      "price": 549.99,
+      "stock": 60,
+      "category": "Electrónica",
+      "createdAt": "2024-01-18T00:00:00"
+    },
+    {
+      "id": 5,
+      "name": "Auriculares Noise Cancelling",
+      "description": "Auriculares over-ear con cancelación activa de ruido y autonomía de 30 horas.",
+      "price": 249.99,
+      "stock": 85,
+      "category": "Audio",
+      "createdAt": "2024-01-20T00:00:00"
+    },
+    {
+      "id": 6,
+      "name": "Webcam Full HD 1080p",
+      "description": "Cámara web con micrófono integrado, ideal para videollamadas y streaming.",
+      "price": 79.99,
+      "stock": 150,
+      "category": "Accesorios",
+      "createdAt": "2024-01-22T00:00:00"
+    },
+    {
+      "id": 7,
+      "name": "Silla Gamer ErgoMax",
+      "description": "Silla gaming ergonómica con soporte lumbar ajustable y reposabrazos 4D.",
+      "price": 349.99,
+      "stock": 30,
+      "category": "Muebles",
+      "createdAt": "2024-01-25T00:00:00"
+    },
+    {
+      "id": 8,
+      "name": "Escritorio Standing Desk",
+      "description": "Escritorio de altura ajustable eléctrico para trabajo de pie o sentado.",
+      "price": 599.99,
+      "stock": 20,
+      "category": "Muebles",
+      "createdAt": "2024-01-28T00:00:00"
+    },
+    {
+      "id": 9,
+      "name": "Hub USB-C 7 en 1",
+      "description": "Concentrador USB-C con HDMI 4K, USB 3.0, lector de tarjetas SD y carga rápida.",
+      "price": 39.99,
+      "stock": 300,
+      "category": "Accesorios",
+      "createdAt": "2024-02-01T00:00:00"
+    },
+    {
+      "id": 10,
+      "name": "SSD Externo 1TB",
+      "description": "Disco sólido externo ultraportátil con velocidades de transferencia de hasta 1050 MB/s.",
+      "price": 109.99,
+      "stock": 90,
+      "category": "Almacenamiento",
+      "createdAt": "2024-02-03T00:00:00"
+    },
+    {
+      "id": 11,
+      "name": "Smartphone Galaxy Z",
+      "description": "Teléfono inteligente plegable con pantalla AMOLED de 6.7 pulgadas y cámara de 108 MP.",
+      "price": 1099.99,
+      "stock": 40,
+      "category": "Móviles",
+      "createdAt": "2024-02-05T00:00:00"
+    },
+    {
+      "id": 12,
+      "name": "Tablet Pro 11\"",
+      "description": "Tablet de alto rendimiento con chip M2, pantalla Liquid Retina y soporte para lápiz.",
+      "price": 799.99,
+      "stock": 55,
+      "category": "Electrónica",
+      "createdAt": "2024-02-07T00:00:00"
+    },
+    {
+      "id": 13,
+      "name": "Smartwatch Fitness Pro",
+      "description": "Reloj inteligente con GPS, monitor cardíaco y resistencia al agua hasta 50 metros.",
+      "price": 199.99,
+      "stock": 110,
+      "category": "Wearables",
+      "createdAt": "2024-02-10T00:00:00"
+    },
+    {
+      "id": 14,
+      "name": "Altavoz Bluetooth 360°",
+      "description": "Altavoz portátil con sonido envolvente 360°, impermeable y 24 horas de batería.",
+      "price": 59.99,
+      "stock": 175,
+      "category": "Audio",
+      "createdAt": "2024-02-12T00:00:00"
+    },
+    {
+      "id": 15,
+      "name": "Router WiFi 6E",
+      "description": "Router de banda triple con WiFi 6E para conexiones ultrarrápidas y baja latencia.",
+      "price": 179.99,
+      "stock": 65,
+      "category": "Redes",
+      "createdAt": "2024-02-14T00:00:00"
+    },
+    {
+      "id": 16,
+      "name": "Impresora Multifunción Láser",
+      "description": "Impresora láser a color multifunción con conectividad WiFi y doble cara automática.",
+      "price": 299.99,
+      "stock": 35,
+      "category": "Oficina",
+      "createdAt": "2024-02-16T00:00:00"
+    },
+    {
+      "id": 17,
+      "name": "Proyector 4K Portátil",
+      "description": "Mini proyector 4K con brillo de 1000 lúmenes, altavoces integrados y batería interna.",
+      "price": 449.99,
+      "stock": 25,
+      "category": "Electrónica",
+      "createdAt": "2024-02-18T00:00:00"
+    },
+    {
+      "id": 18,
+      "name": "Cámara Mirrorless Alpha",
+      "description": "Cámara sin espejo de 33 MP con sistema de enfoque automático en tiempo real.",
+      "price": 2499.99,
+      "stock": 15,
+      "category": "Fotografía",
+      "createdAt": "2024-02-20T00:00:00"
+    },
+    {
+      "id": 19,
+      "name": "Drone FPV Racing",
+      "description": "Dron de carreras FPV con cámara 4K y velocidad máxima de 140 km/h.",
+      "price": 699.99,
+      "stock": 18,
+      "category": "Drones",
+      "createdAt": "2024-02-22T00:00:00"
+    },
+    {
+      "id": 20,
+      "name": "Consola Gaming Portátil",
+      "description": "Consola portátil con pantalla OLED de 7 pulgadas y catálogo de más de 8000 juegos.",
+      "price": 349.99,
+      "stock": 70,
+      "category": "Gaming",
+      "createdAt": "2024-02-25T00:00:00"
+    },
+    {
+      "id": 21,
+      "name": "Mando Gaming Pro",
+      "description": "Control inalámbrico con gatillos adaptativos, vibración háptica y batería de 30h.",
+      "price": 69.99,
+      "stock": 160,
+      "category": "Gaming",
+      "createdAt": "2024-03-01T00:00:00"
+    },
+    {
+      "id": 22,
+      "name": "Micrófono USB Condenser",
+      "description": "Micrófono de condensador USB con patrón cardioide ideal para podcasting y streaming.",
+      "price": 99.99,
+      "stock": 95,
+      "category": "Audio",
+      "createdAt": "2024-03-03T00:00:00"
+    },
+    {
+      "id": 23,
+      "name": "Interfaz de Audio 2x2",
+      "description": "Interfaz de audio profesional con 2 entradas de micrófono/instrumento y preamps de alta calidad.",
+      "price": 149.99,
+      "stock": 50,
+      "category": "Audio",
+      "createdAt": "2024-03-05T00:00:00"
+    },
+    {
+      "id": 24,
+      "name": "Cargador Inalámbrico 15W",
+      "description": "Base de carga inalámbrica rápida compatible con Qi, capaz de cargar varios dispositivos.",
+      "price": 29.99,
+      "stock": 400,
+      "category": "Accesorios",
+      "createdAt": "2024-03-07T00:00:00"
+    },
+    {
+      "id": 25,
+      "name": "Batería Externa 20000mAh",
+      "description": "Power bank de alta capacidad con carga rápida USB-C 65W para laptops y móviles.",
+      "price": 59.99,
+      "stock": 220,
+      "category": "Accesorios",
+      "createdAt": "2024-03-10T00:00:00"
+    },
+    {
+      "id": 26,
+      "name": "Lámpara de Escritorio LED",
+      "description": "Lámpara LED inteligente con control táctil, temperatura de color ajustable y puerto USB.",
+      "price": 44.99,
+      "stock": 180,
+      "category": "Iluminación",
+      "createdAt": "2024-03-12T00:00:00"
+    },
+    {
+      "id": 27,
+      "name": "Soporte Monitor Doble",
+      "description": "Soporte de monitor dual con brazo articulado para pantallas de hasta 32 pulgadas.",
+      "price": 89.99,
+      "stock": 75,
+      "category": "Accesorios",
+      "createdAt": "2024-03-14T00:00:00"
+    },
+    {
+      "id": 28,
+      "name": "Alfombrilla XL Gaming",
+      "description": "Alfombrilla de ratón extragrande de 90x40 cm con base antideslizante y bordes cosidos.",
+      "price": 24.99,
+      "stock": 350,
+      "category": "Accesorios",
+      "createdAt": "2024-03-16T00:00:00"
+    },
+    {
+      "id": 29,
+      "name": "RAM DDR5 32GB Kit",
+      "description": "Kit de memoria RAM DDR5 32GB (2x16GB) a 5600MHz con disipador.",
+      "price": 129.99,
+      "stock": 80,
+      "category": "Componentes",
+      "createdAt": "2024-03-18T00:00:00"
+    },
+    {
+      "id": 30,
+      "name": "GPU RTX Gamer 8GB",
+      "description": "Tarjeta gráfica de alto rendimiento con 8GB GDDR6X y ray tracing en tiempo real.",
+      "price": 599.99,
+      "stock": 22,
+      "category": "Componentes",
+      "createdAt": "2024-03-20T00:00:00"
+    },
+    {
+      "id": 31,
+      "name": "CPU Procesador 16 Cores",
+      "description": "Procesador de 16 núcleos y 32 hilos con boost clock de 5.4GHz para workstations.",
+      "price": 449.99,
+      "stock": 28,
+      "category": "Componentes",
+      "createdAt": "2024-03-22T00:00:00"
+    },
+    {
+      "id": 32,
+      "name": "Placa Base ATX Z790",
+      "description": "Placa base ATX con soporte DDR5, PCIe 5.0 y múltiples puertos USB4.",
+      "price": 249.99,
+      "stock": 32,
+      "category": "Componentes",
+      "createdAt": "2024-03-25T00:00:00"
+    },
+    {
+      "id": 33,
+      "name": "Fuente de Poder 850W",
+      "description": "PSU modular 80+ Gold con 850W de potencia, cables individuales y protección completa.",
+      "price": 119.99,
+      "stock": 55,
+      "category": "Componentes",
+      "createdAt": "2024-03-28T00:00:00"
+    },
+    {
+      "id": 34,
+      "name": "Gabinete Mid-Tower ATX",
+      "description": "Caja PC mid-tower con flujo de aire optimizado, panel lateral vidrio templado y RGB.",
+      "price": 89.99,
+      "stock": 40,
+      "category": "Componentes",
+      "createdAt": "2024-04-01T00:00:00"
+    },
+    {
+      "id": 35,
+      "name": "Cooler Líquido 360mm AIO",
+      "description": "Refrigeración líquida todo-en-uno con radiador de 360mm y ventiladores ARGB.",
+      "price": 139.99,
+      "stock": 45,
+      "category": "Componentes",
+      "createdAt": "2024-04-03T00:00:00"
+    },
+    {
+      "id": 36,
+      "name": "Pasta Térmica Premium",
+      "description": "Pasta térmica de alta conductividad para procesadores, incluye aplicador y limpiador.",
+      "price": 9.99,
+      "stock": 500,
+      "category": "Componentes",
+      "createdAt": "2024-04-05T00:00:00"
+    },
+    {
+      "id": 37,
+      "name": "NVMe SSD 2TB PCIe 5.0",
+      "description": "SSD M.2 NVMe con velocidades de lectura de hasta 12000 MB/s y caché 3D NAND.",
+      "price": 199.99,
+      "stock": 60,
+      "category": "Almacenamiento",
+      "createdAt": "2024-04-07T00:00:00"
+    },
+    {
+      "id": 38,
+      "name": "HDD 4TB NAS",
+      "description": "Disco duro de 4TB diseñado para NAS con operación 24/7 y alta fiabilidad.",
+      "price": 79.99,
+      "stock": 100,
+      "category": "Almacenamiento",
+      "createdAt": "2024-04-09T00:00:00"
+    },
+    {
+      "id": 39,
+      "name": "Switch Gigabit 8 Puertos",
+      "description": "Switch no gestionado de 8 puertos Gigabit con diseño silencioso y plug-and-play.",
+      "price": 34.99,
+      "stock": 130,
+      "category": "Redes",
+      "createdAt": "2024-04-11T00:00:00"
+    },
+    {
+      "id": 40,
+      "name": "Access Point WiFi 6 Mesh",
+      "description": "Punto de acceso mesh WiFi 6 para cobertura total del hogar sin zonas muertas.",
+      "price": 129.99,
+      "stock": 55,
+      "category": "Redes",
+      "createdAt": "2024-04-14T00:00:00"
+    },
+    {
+      "id": 41,
+      "name": "Kindle E-Reader 2024",
+      "description": "Lector de libros electrónicos con pantalla de 300 ppi, retroiluminación y semanas de batería.",
+      "price": 139.99,
+      "stock": 90,
+      "category": "Electrónica",
+      "createdAt": "2024-04-16T00:00:00"
+    },
+    {
+      "id": 42,
+      "name": "Robot Aspirador con Mopa",
+      "description": "Aspirador robot con función de fregado, mapeo láser y vaciado automático.",
+      "price": 449.99,
+      "stock": 35,
+      "category": "Hogar",
+      "createdAt": "2024-04-18T00:00:00"
+    },
+    {
+      "id": 43,
+      "name": "Cerradura Smart WiFi",
+      "description": "Cerradura inteligente con huella dactilar, PIN, tarjeta y app móvil.",
+      "price": 129.99,
+      "stock": 70,
+      "category": "Hogar",
+      "createdAt": "2024-04-20T00:00:00"
+    },
+    {
+      "id": 44,
+      "name": "Timbre Inteligente con Cámara",
+      "description": "Videoportero WiFi con visión nocturna, detección de movimiento y almacenamiento en nube.",
+      "price": 99.99,
+      "stock": 85,
+      "category": "Hogar",
+      "createdAt": "2024-04-22T00:00:00"
+    },
+    {
+      "id": 45,
+      "name": "Termostato Inteligente",
+      "description": "Termostato WiFi con aprendizaje automático, control por voz y ahorro energético.",
+      "price": 149.99,
+      "stock": 60,
+      "category": "Hogar",
+      "createdAt": "2024-04-25T00:00:00"
+    },
+    {
+      "id": 46,
+      "name": "Bombilla LED Smart RGB",
+      "description": "Pack de 4 bombillas inteligentes E27 con 16 millones de colores y control por app.",
+      "price": 39.99,
+      "stock": 250,
+      "category": "Iluminación",
+      "createdAt": "2024-05-01T00:00:00"
+    },
+    {
+      "id": 47,
+      "name": "Tira LED WiFi 5m",
+      "description": "Tira de luces LED RGBIC de 5 metros con efectos personalizables y sincronización musical.",
+      "price": 29.99,
+      "stock": 320,
+      "category": "Iluminación",
+      "createdAt": "2024-05-03T00:00:00"
+    },
+    {
+      "id": 48,
+      "name": "Enchufe Inteligente con Medidor",
+      "description": "Enchufe WiFi con control de consumo energético, temporizador y protección contra sobretensiones.",
+      "price": 15.99,
+      "stock": 450,
+      "category": "Hogar",
+      "createdAt": "2024-05-05T00:00:00"
+    },
+    {
+      "id": 49,
+      "name": "Cámara IP Exterior 4K",
+      "description": "Cámara de vigilancia exterior 4K con visión nocturna a color, sirena y detección de personas.",
+      "price": 89.99,
+      "stock": 75,
+      "category": "Seguridad",
+      "createdAt": "2024-05-07T00:00:00"
+    },
+    {
+      "id": 50,
+      "name": "Panel Solar 100W",
+      "description": "Panel solar monocristalino de 100W con alta eficiencia para sistemas off-grid.",
+      "price": 119.99,
+      "stock": 40,
+      "category": "Energía",
+      "createdAt": "2024-05-10T00:00:00"
+    },
+    {
+      "id": 51,
+      "name": "Estación Meteorológica WiFi",
+      "description": "Estación climática con sensores de temperatura, humedad, presión y conexión a app.",
+      "price": 79.99,
+      "stock": 55,
+      "category": "Hogar",
+      "createdAt": "2024-05-12T00:00:00"
+    },
+    {
+      "id": 52,
+      "name": "Purificador de Aire HEPA",
+      "description": "Purificador de aire con filtro HEPA, carbón activo y sensor de calidad del aire en tiempo real.",
+      "price": 189.99,
+      "stock": 45,
+      "category": "Hogar",
+      "createdAt": "2024-05-14T00:00:00"
+    },
+    {
+      "id": 53,
+      "name": "Humidificador Ultrasónico",
+      "description": "Humidificador ultrasónico silencioso con capacidad de 5L y aromaterapia integrada.",
+      "price": 49.99,
+      "stock": 90,
+      "category": "Hogar",
+      "createdAt": "2024-05-16T00:00:00"
+    },
+    {
+      "id": 54,
+      "name": "Cafetera Automática Espresso",
+      "description": "Cafetera con molinillo integrado, sistema de espuma de leche y 12 recetas preprogramadas.",
+      "price": 399.99,
+      "stock": 30,
+      "category": "Cocina",
+      "createdAt": "2024-05-18T00:00:00"
+    },
+    {
+      "id": 55,
+      "name": "Airfryer 6L Digital",
+      "description": "Freidora de aire de 6 litros con pantalla táctil, 8 modos de cocción y temporizador.",
+      "price": 89.99,
+      "stock": 120,
+      "category": "Cocina",
+      "createdAt": "2024-05-20T00:00:00"
+    },
+    {
+      "id": 56,
+      "name": "Batidora de Vaso 2200W",
+      "description": "Licuadora de alto rendimiento de 2200W con jarra de acero inoxidable y detección automática.",
+      "price": 149.99,
+      "stock": 65,
+      "category": "Cocina",
+      "createdAt": "2024-05-22T00:00:00"
+    },
+    {
+      "id": 57,
+      "name": "Balanza de Cocina Digital",
+      "description": "Báscula de precisión de hasta 5 kg con función de tara y pantalla LCD retroiluminada.",
+      "price": 19.99,
+      "stock": 380,
+      "category": "Cocina",
+      "createdAt": "2024-05-25T00:00:00"
+    },
+    {
+      "id": 58,
+      "name": "Set Cuchillos Damasco 5 Piezas",
+      "description": "Juego de cuchillos de acero damasco de 67 capas con mango de madera de pakkawood.",
+      "price": 199.99,
+      "stock": 35,
+      "category": "Cocina",
+      "createdAt": "2024-06-01T00:00:00"
+    },
+    {
+      "id": 59,
+      "name": "Tabla de Cortar Bambú XL",
+      "description": "Tabla de bambú extra grande con ranuras para jugos, resistente a bacterias y ecológica.",
+      "price": 34.99,
+      "stock": 200,
+      "category": "Cocina",
+      "createdAt": "2024-06-03T00:00:00"
+    },
+    {
+      "id": 60,
+      "name": "Sartén Antiadherente 28cm",
+      "description": "Sartén de aluminio forjado con recubrimiento cerámico antiadherente compatible con inducción.",
+      "price": 44.99,
+      "stock": 160,
+      "category": "Cocina",
+      "createdAt": "2024-06-05T00:00:00"
+    },
+    {
+      "id": 61,
+      "name": "Olla Instantánea 8L",
+      "description": "Olla de cocción a presión eléctrica multifunción de 8L con 14 programas preestablecidos.",
+      "price": 119.99,
+      "stock": 55,
+      "category": "Cocina",
+      "createdAt": "2024-06-07T00:00:00"
+    },
+    {
+      "id": 62,
+      "name": "Zapatillas Running Pro",
+      "description": "Zapatillas de running con suela de espuma de retorno de energía y upper de malla transpirable.",
+      "price": 129.99,
+      "stock": 100,
+      "category": "Deportes",
+      "createdAt": "2024-06-10T00:00:00"
+    },
+    {
+      "id": 63,
+      "name": "Mochila Hiking 50L",
+      "description": "Mochila de senderismo de 50L con sistema de suspensión ventilada y cubierta impermeable.",
+      "price": 149.99,
+      "stock": 60,
+      "category": "Deportes",
+      "createdAt": "2024-06-12T00:00:00"
+    },
+    {
+      "id": 64,
+      "name": "Bicicleta de Montaña 29\"",
+      "description": "MTB con cuadro de aluminio, horquilla de suspensión y grupo Shimano de 21 velocidades.",
+      "price": 549.99,
+      "stock": 20,
+      "category": "Deportes",
+      "createdAt": "2024-06-14T00:00:00"
+    },
+    {
+      "id": 65,
+      "name": "Cinta de Correr Plegable",
+      "description": "Treadmill plegable con velocidad hasta 16 km/h, inclinación automática y pantalla LCD.",
+      "price": 799.99,
+      "stock": 12,
+      "category": "Deportes",
+      "createdAt": "2024-06-16T00:00:00"
+    },
+    {
+      "id": 66,
+      "name": "Kettlebell Ajustable 24kg",
+      "description": "Pesa rusa ajustable de 4 a 24 kg con platos intercambiables y mango ergonómico.",
+      "price": 89.99,
+      "stock": 80,
+      "category": "Deportes",
+      "createdAt": "2024-06-18T00:00:00"
+    },
+    {
+      "id": 67,
+      "name": "Esterilla de Yoga Premium",
+      "description": "Colchoneta antideslizante de 6mm de PVC ecológico con marcas de alineación y correa.",
+      "price": 29.99,
+      "stock": 250,
+      "category": "Deportes",
+      "createdAt": "2024-06-20T00:00:00"
+    },
+    {
+      "id": 68,
+      "name": "Bicicleta Eléctrica Urbana",
+      "description": "E-bike urbana de 250W con batería de 36V, autonomía de 80km y frenos hidráulicos.",
+      "price": 1299.99,
+      "stock": 10,
+      "category": "Transporte",
+      "createdAt": "2024-06-22T00:00:00"
+    },
+    {
+      "id": 69,
+      "name": "Patinete Eléctrico 500W",
+      "description": "Scooter eléctrico de 500W con pantalla LED, autonomía de 45km y velocidad de 25 km/h.",
+      "price": 449.99,
+      "stock": 18,
+      "category": "Transporte",
+      "createdAt": "2024-06-25T00:00:00"
+    },
+    {
+      "id": 70,
+      "name": "Casco Ciclismo Aero LED",
+      "description": "Casco de ciclismo aerodinámico con luz LED trasera integrada y certificación CE.",
+      "price": 79.99,
+      "stock": 95,
+      "category": "Deportes",
+      "createdAt": "2024-07-01T00:00:00"
+    },
+    {
+      "id": 71,
+      "name": "Botella Térmica 1L",
+      "description": "Botella de acero inoxidable al vacío que mantiene bebidas frías 24h o calientes 12h.",
+      "price": 24.99,
+      "stock": 300,
+      "category": "Deportes",
+      "createdAt": "2024-07-03T00:00:00"
+    },
+    {
+      "id": 72,
+      "name": "Reloj GPS Trail Running",
+      "description": "Reloj deportivo con GPS multibanda, mapas topográficos y monitoreo de salud avanzado.",
+      "price": 449.99,
+      "stock": 35,
+      "category": "Wearables",
+      "createdAt": "2024-07-05T00:00:00"
+    },
+    {
+      "id": 73,
+      "name": "Pulsera de Actividad Slim",
+      "description": "Pulsera fitness ultradelgada con seguimiento de sueño, estrés y 14 modos deportivos.",
+      "price": 49.99,
+      "stock": 180,
+      "category": "Wearables",
+      "createdAt": "2024-07-07T00:00:00"
+    },
+    {
+      "id": 74,
+      "name": "Audífonos TWS Sport",
+      "description": "Auriculares true wireless deportivos con IP55, 8h de batería y cancelación de ruido.",
+      "price": 79.99,
+      "stock": 140,
+      "category": "Audio",
+      "createdAt": "2024-07-09T00:00:00"
+    },
+    {
+      "id": 75,
+      "name": "Altavoz Inteligente con Asistente",
+      "description": "Altavoz con asistente de voz integrado, sonido 360° y hub domótico para hogar inteligente.",
+      "price": 99.99,
+      "stock": 100,
+      "category": "Audio",
+      "createdAt": "2024-07-12T00:00:00"
+    },
+    {
+      "id": 76,
+      "name": "Lector de Tarjetas All-in-One",
+      "description": "Lector de tarjetas multiformato USB-C con soporte SD, microSD, CF y más.",
+      "price": 19.99,
+      "stock": 400,
+      "category": "Accesorios",
+      "createdAt": "2024-07-14T00:00:00"
+    },
+    {
+      "id": 77,
+      "name": "Cable USB-C a USB-C 2m 240W",
+      "description": "Cable USB-C de 2m con soporte para carga de 240W y transferencia a 40Gbps.",
+      "price": 14.99,
+      "stock": 600,
+      "category": "Accesorios",
+      "createdAt": "2024-07-16T00:00:00"
+    },
+    {
+      "id": 78,
+      "name": "Soporte Móvil para Coche",
+      "description": "Soporte magnético para móvil en coche con carga inalámbrica 15W integrada.",
+      "price": 34.99,
+      "stock": 280,
+      "category": "Accesorios",
+      "createdAt": "2024-07-18T00:00:00"
+    },
+    {
+      "id": 79,
+      "name": "Funda Laptop 15\" Impermeable",
+      "description": "Maletín para portátil de 15 pulgadas con múltiples compartimentos y exterior impermeable.",
+      "price": 39.99,
+      "stock": 170,
+      "category": "Accesorios",
+      "createdAt": "2024-07-20T00:00:00"
+    },
+    {
+      "id": 80,
+      "name": "Mochila Antirrobo con USB",
+      "description": "Mochila urbana antirrobo con puerto USB externo, compartimento acolchado para laptop de 17\".",
+      "price": 59.99,
+      "stock": 120,
+      "category": "Accesorios",
+      "createdAt": "2024-07-22T00:00:00"
+    },
+    {
+      "id": 81,
+      "name": "Impresora 3D FDM 250x250",
+      "description": "Impresora 3D de escritorio con área de impresión de 250x250x300mm y nivelación automática.",
+      "price": 299.99,
+      "stock": 22,
+      "category": "Impresión 3D",
+      "createdAt": "2024-07-25T00:00:00"
+    },
+    {
+      "id": 82,
+      "name": "Filamento PLA+ 1kg Negro",
+      "description": "Bobina de filamento PLA+ de 1kg y 1.75mm de diámetro, color negro mate.",
+      "price": 22.99,
+      "stock": 350,
+      "category": "Impresión 3D",
+      "createdAt": "2024-08-01T00:00:00"
+    },
+    {
+      "id": 83,
+      "name": "Pluma 3D LED Niños",
+      "description": "Pluma de impresión 3D para niños con filamento PCL de baja temperatura y soporte LED.",
+      "price": 29.99,
+      "stock": 150,
+      "category": "Impresión 3D",
+      "createdAt": "2024-08-03T00:00:00"
+    },
+    {
+      "id": 84,
+      "name": "Escáner 3D de Mano",
+      "description": "Escáner 3D portátil de alta precisión para ingeniería inversa y diseño industrial.",
+      "price": 1999.99,
+      "stock": 8,
+      "category": "Impresión 3D",
+      "createdAt": "2024-08-05T00:00:00"
+    },
+    {
+      "id": 85,
+      "name": "Libro Python para Todos",
+      "description": "Manual práctico de programación en Python para principiantes con proyectos reales.",
+      "price": 34.99,
+      "stock": 200,
+      "category": "Libros",
+      "createdAt": "2024-08-07T00:00:00"
+    },
+    {
+      "id": 86,
+      "name": "Libro Clean Code",
+      "description": "Guía de buenas prácticas de desarrollo de software y escritura de código limpio.",
+      "price": 44.99,
+      "stock": 150,
+      "category": "Libros",
+      "createdAt": "2024-08-09T00:00:00"
+    },
+    {
+      "id": 87,
+      "name": "Cuaderno Inteligente Rocketbook",
+      "description": "Cuaderno reutilizable con digitalización instantánea a la nube mediante app y escaneado.",
+      "price": 27.99,
+      "stock": 220,
+      "category": "Oficina",
+      "createdAt": "2024-08-12T00:00:00"
+    },
+    {
+      "id": 88,
+      "name": "Organizador de Cables Escritorio",
+      "description": "Organizador de cables con bandeja porta-hub y clips adhesivos para escritorio ordenado.",
+      "price": 22.99,
+      "stock": 300,
+      "category": "Oficina",
+      "createdAt": "2024-08-14T00:00:00"
+    },
+    {
+      "id": 89,
+      "name": "Reposamuñecas Ergonómico",
+      "description": "Reposamuñecas de espuma viscoelástica para teclado y ratón, antiestático y lavable.",
+      "price": 17.99,
+      "stock": 350,
+      "category": "Accesorios",
+      "createdAt": "2024-08-16T00:00:00"
+    },
+    {
+      "id": 90,
+      "name": "Monitor de Privacidad 14\"",
+      "description": "Filtro de privacidad para portátil de 14 pulgadas que limita el ángulo de visión lateral.",
+      "price": 29.99,
+      "stock": 180,
+      "category": "Accesorios",
+      "createdAt": "2024-08-18T00:00:00"
+    },
+    {
+      "id": 91,
+      "name": "Lápiz Stylus Universal",
+      "description": "Lápiz táctil activo compatible con la mayoría de tablets y móviles, con punta fina de 1.5mm.",
+      "price": 39.99,
+      "stock": 200,
+      "category": "Accesorios",
+      "createdAt": "2024-08-20T00:00:00"
+    },
+    {
+      "id": 92,
+      "name": "Marco Digital WiFi 10\"",
+      "description": "Marco de fotos digital de 10 pulgadas con pantalla IPS, compartición por app y almacenamiento en nube.",
+      "price": 89.99,
+      "stock": 70,
+      "category": "Electrónica",
+      "createdAt": "2024-08-22T00:00:00"
+    },
+    {
+      "id": 93,
+      "name": "Walkie Talkie 50km IP67",
+      "description": "Par de walkie-talkies con alcance de 50km, resistencia al agua IP67 y 22 canales FRS/GMRS.",
+      "price": 69.99,
+      "stock": 60,
+      "category": "Comunicaciones",
+      "createdAt": "2024-08-25T00:00:00"
+    },
+    {
+      "id": 94,
+      "name": "Localizador GPS Mascotas",
+      "description": "Rastreador GPS para mascotas con seguimiento en tiempo real, historial de rutas y alertas.",
+      "price": 49.99,
+      "stock": 110,
+      "category": "Mascotas",
+      "createdAt": "2024-09-01T00:00:00"
+    },
+    {
+      "id": 95,
+      "name": "Comedero Automático Mascotas",
+      "description": "Dispensador de comida automático para mascotas con cámara, micrófono y programación horaria.",
+      "price": 79.99,
+      "stock": 80,
+      "category": "Mascotas",
+      "createdAt": "2024-09-03T00:00:00"
+    },
+    {
+      "id": 96,
+      "name": "Microscopio Digital USB 1000x",
+      "description": "Microscopio electrónico USB con aumento 40x-1000x, cámara 12MP y software incluido.",
+      "price": 59.99,
+      "stock": 65,
+      "category": "Educación",
+      "createdAt": "2024-09-05T00:00:00"
+    },
+    {
+      "id": 97,
+      "name": "Kit Robótica Arduino Starter",
+      "description": "Kit de iniciación a la robótica y electrónica con placa, sensores, motores y 30 proyectos guiados.",
+      "price": 49.99,
+      "stock": 120,
+      "category": "Educación",
+      "createdAt": "2024-09-07T00:00:00"
+    },
+    {
+      "id": 98,
+      "name": "Gafas VR Standalone 4K",
+      "description": "Headset de realidad virtual autónomo con pantalla 4K por ojo, 6DoF y biblioteca de contenidos.",
+      "price": 499.99,
+      "stock": 25,
+      "category": "Realidad Virtual",
+      "createdAt": "2024-09-10T00:00:00"
+    },
+    {
+      "id": 99,
+      "name": "Guantes Hápticos VR",
+      "description": "Guantes de retroalimentación háptica para realidad virtual que simulan texturas y resistencia.",
+      "price": 299.99,
+      "stock": 15,
+      "category": "Realidad Virtual",
+      "createdAt": "2024-09-12T00:00:00"
+    },
+    {
+      "id": 100,
+      "name": "Servidor NAS 4 Bahías",
+      "description": "NAS de 4 bahías con soporte RAID, acceso remoto, transcoding 4K y compatibilidad con apps.",
+      "price": 349.99,
+      "stock": 20,
+      "category": "Almacenamiento",
+      "createdAt": "2024-09-15T00:00:00"
+    }
+  ]
+}
