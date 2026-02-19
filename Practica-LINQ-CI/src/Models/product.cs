@@ -1,4 +1,4 @@
-
+namespace Practica_LINQ_CI.Models;
 public class Product
 {
   public int Id { get; set; }
