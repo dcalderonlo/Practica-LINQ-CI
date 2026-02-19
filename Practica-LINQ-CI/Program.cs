@@ -1,6 +1,7 @@
 ﻿using Practica_LINQ_CI.Data;
 using Practica_LINQ_CI.Models;
 using Practica_LINQ_CI.Queries;
+using Practica_LINQ_CI.Helpers;
 
 // ═══════════════════════════════════════════════════════════════════════════════
 //  LINQ Productos – Punto de entrada de la aplicación
@@ -21,7 +22,7 @@ static void RunMenu(List<Product> products)
 {
   while (true)
   {
-    PrintMenu();
+    MenuHelper.PrintMenu();
     Console.Write("\nSelecciona un ejercicio (0 para salir): ");
     var input = Console.ReadLine();
 
@@ -47,51 +48,51 @@ static void RunMenu(List<Product> products)
   }
 }
 
-// Imprime en consola la lista de todos los ejercicios disponibles.
-static void PrintMenu()
-{
-  Console.WriteLine("\n--- Menú de ejercicios ---");
-  Console.WriteLine(" 1.  Obtener todos los productos de la lista.");
-  Console.WriteLine(" 2.  Obtener los nombres de todos los productos.");
-  Console.WriteLine(" 3.  Obtener los productos cuyo precio sea mayor a 500.");
-  Console.WriteLine(" 4.  Obtener los productos con stock menor a 10.");
-  Console.WriteLine(" 5.  Obtener los productos de la categoría Electrónica.");
-  Console.WriteLine(" 6.  Obtener los productos cuyo nombre comience con la letra L.");
-  Console.WriteLine(" 7.  Obtener los productos cuyo precio esté entre 100 y 500.");
-  Console.WriteLine(" 8.  Obtener los productos ordenados por precio ascendente.");
-  Console.WriteLine(" 9.  Obtener los productos ordenados por precio descendente.");
-  Console.WriteLine("10.  Obtener los productos ordenados por nombre alfabético.");
-  Console.WriteLine("11.  Obtener los productos ordenados por stock de mayor a menor.");
-  Console.WriteLine("12.  Obtener los primeros 5 productos más caros.");
-  Console.WriteLine("13.  Obtener los 10 productos con menor stock.");
-  Console.WriteLine("14.  Obtener la cantidad total de productos en la lista.");
-  Console.WriteLine("15.  Obtener la suma de todos los precios de los productos.");
-  Console.WriteLine("16.  Obtener el precio promedio de los productos.");
-  Console.WriteLine("17.  Obtener el producto más caro.");
-  Console.WriteLine("18.  Obtener el producto más barato.");
-  Console.WriteLine("19.  Verificar si hay algún producto con precio mayor a 1000.");
-  Console.WriteLine("20.  Verificar si todos los productos tienen stock mayor a 5.");
-  Console.WriteLine("21.  Contar cuántos productos hay en la categoría Audio.");
-  Console.WriteLine("22.  Agrupar los productos por categoría.");
-  Console.WriteLine("23.  Obtener la categoría con más productos.");
-  Console.WriteLine("24.  Obtener el stock total de todos los productos.");
-  Console.WriteLine("25.  Obtener el producto con el nombre más largo.");
-  Console.WriteLine("26.  Obtener el producto con la descripción más corta.");
-  Console.WriteLine("27.  Filtrar productos cuya descripción contenga la palabra 'pantalla'.");
-  Console.WriteLine("28.  Obtener el promedio de stock de la categoría Almacenamiento.");
-  Console.WriteLine("29.  Obtener los productos creados en una fecha específica (20/12/2022).");
-  Console.WriteLine("30.  Obtener los productos cuya ID sea par.");
-  Console.WriteLine("31.  Obtener los productos cuya ID sea impar.");
-  Console.WriteLine("32.  Obtener los productos cuyo precio tenga un decimal mayor a .50.");
-  Console.WriteLine("33.  Obtener los productos cuyo nombre tenga más de 10 caracteres.");
-  Console.WriteLine("34.  Obtener los productos cuyo stock sea un número primo.");
-  Console.WriteLine("35.  Obtener los productos cuyo nombre contenga la palabra 'Pro'.");
-  Console.WriteLine("36.  Obtener los productos cuyo stock sea un múltiplo de 5.");
-  Console.WriteLine("37.  Obtener los productos con descripción de más de 20 caracteres.");
-  Console.WriteLine("38.  Obtener los productos cuyo precio sea un número redondo.");
-  Console.WriteLine("39.  Obtener los productos que tengan exactamente dos palabras en su nombre.");
-  Console.WriteLine("40.  Obtener la cantidad de productos que no pertenecen a la categoría General.");
-}
+// // Imprime en consola la lista de todos los ejercicios disponibles.
+// static void PrintMenu()
+// {
+//   Console.WriteLine("\n--- Menú de ejercicios ---");
+//   Console.WriteLine(" 1.  Obtener todos los productos de la lista.");
+//   Console.WriteLine(" 2.  Obtener los nombres de todos los productos.");
+//   Console.WriteLine(" 3.  Obtener los productos cuyo precio sea mayor a 500.");
+//   Console.WriteLine(" 4.  Obtener los productos con stock menor a 10.");
+//   Console.WriteLine(" 5.  Obtener los productos de la categoría Electrónica.");
+//   Console.WriteLine(" 6.  Obtener los productos cuyo nombre comience con la letra L.");
+//   Console.WriteLine(" 7.  Obtener los productos cuyo precio esté entre 100 y 500.");
+//   Console.WriteLine(" 8.  Obtener los productos ordenados por precio ascendente.");
+//   Console.WriteLine(" 9.  Obtener los productos ordenados por precio descendente.");
+//   Console.WriteLine("10.  Obtener los productos ordenados por nombre alfabético.");
+//   Console.WriteLine("11.  Obtener los productos ordenados por stock de mayor a menor.");
+//   Console.WriteLine("12.  Obtener los primeros 5 productos más caros.");
+//   Console.WriteLine("13.  Obtener los 10 productos con menor stock.");
+//   Console.WriteLine("14.  Obtener la cantidad total de productos en la lista.");
+//   Console.WriteLine("15.  Obtener la suma de todos los precios de los productos.");
+//   Console.WriteLine("16.  Obtener el precio promedio de los productos.");
+//   Console.WriteLine("17.  Obtener el producto más caro.");
+//   Console.WriteLine("18.  Obtener el producto más barato.");
+//   Console.WriteLine("19.  Verificar si hay algún producto con precio mayor a 1000.");
+//   Console.WriteLine("20.  Verificar si todos los productos tienen stock mayor a 5.");
+//   Console.WriteLine("21.  Contar cuántos productos hay en la categoría Audio.");
+//   Console.WriteLine("22.  Agrupar los productos por categoría.");
+//   Console.WriteLine("23.  Obtener la categoría con más productos.");
+//   Console.WriteLine("24.  Obtener el stock total de todos los productos.");
+//   Console.WriteLine("25.  Obtener el producto con el nombre más largo.");
+//   Console.WriteLine("26.  Obtener el producto con la descripción más corta.");
+//   Console.WriteLine("27.  Filtrar productos cuya descripción contenga la palabra 'pantalla'.");
+//   Console.WriteLine("28.  Obtener el promedio de stock de la categoría Almacenamiento.");
+//   Console.WriteLine("29.  Obtener los productos creados en una fecha específica (20/12/2022).");
+//   Console.WriteLine("30.  Obtener los productos cuya ID sea par.");
+//   Console.WriteLine("31.  Obtener los productos cuya ID sea impar.");
+//   Console.WriteLine("32.  Obtener los productos cuyo precio tenga un decimal mayor a .50.");
+//   Console.WriteLine("33.  Obtener los productos cuyo nombre tenga más de 10 caracteres.");
+//   Console.WriteLine("34.  Obtener los productos cuyo stock sea un número primo.");
+//   Console.WriteLine("35.  Obtener los productos cuyo nombre contenga la palabra 'Pro'.");
+//   Console.WriteLine("36.  Obtener los productos cuyo stock sea un múltiplo de 5.");
+//   Console.WriteLine("37.  Obtener los productos con descripción de más de 20 caracteres.");
+//   Console.WriteLine("38.  Obtener los productos cuyo precio sea un número redondo.");
+//   Console.WriteLine("39.  Obtener los productos que tengan exactamente dos palabras en su nombre.");
+//   Console.WriteLine("40.  Obtener la cantidad de productos que no pertenecen a la categoría General.");
+// }
 
 // Recibe la opción elegida por el usuario y llama al método correspondiente de ProductQueries, luego imprime el resultado.
 static void ExecuteExercise(int option, List<Product> products)
@@ -99,117 +100,117 @@ static void ExecuteExercise(int option, List<Product> products)
     switch (option)
     {
       case 1:
-        PrintProducts("1. Todos los productos", ProductQueries.ObtenerTodos(products));
+        DisplayHelper.PrintProducts("1. Todos los productos", ProductQueries.ObtenerTodos(products));
         break;
 
       case 2:
-        PrintStrings("2. Nombres de todos los productos", ProductQueries.ObtenerNombres(products));
+        DisplayHelper.PrintStrings("2. Nombres de todos los productos", ProductQueries.ObtenerNombres(products));
         break;
 
       case 3:
-        PrintProducts("3. Precio mayor a $500", ProductQueries.PrecioMayorA500(products));
+        DisplayHelper.PrintProducts("3. Precio mayor a $500", ProductQueries.PrecioMayorA500(products));
         break;
 
       case 4:
-        PrintProducts("4. Stock menor a 10", ProductQueries.StockMenorA10(products));
+        DisplayHelper.PrintProducts("4. Stock menor a 10", ProductQueries.StockMenorA10(products));
         break;
 
       case 5:
-        PrintProducts("5. Categoría Electrónica", ProductQueries.CategoriaElectronica(products));
+        DisplayHelper.PrintProducts("5. Categoría Electrónica", ProductQueries.CategoriaElectronica(products));
         break;
 
       case 6:
-        PrintProducts("6. Nombre empieza con 'L'", ProductQueries.NombreEmpiezaConL(products));
+        DisplayHelper.PrintProducts("6. Nombre empieza con 'L'", ProductQueries.NombreEmpiezaConL(products));
         break;
 
       case 7:
-        PrintProducts("7. Precio entre $100 y $500", ProductQueries.PrecioEntre100Y500(products));
+        DisplayHelper.PrintProducts("7. Precio entre $100 y $500", ProductQueries.PrecioEntre100Y500(products));
         break;
 
       case 8:
-        PrintProducts("8. Ordenados por precio ascendente", ProductQueries.OrdenadosPorPrecioAsc(products));
+        DisplayHelper.PrintProducts("8. Ordenados por precio ascendente", ProductQueries.OrdenadosPorPrecioAsc(products));
         break;
 
       case 9:
-        PrintProducts("9. Ordenados por precio descendente", ProductQueries.OrdenadosPorPrecioDesc(products));
+        DisplayHelper.PrintProducts("9. Ordenados por precio descendente", ProductQueries.OrdenadosPorPrecioDesc(products));
         break;
 
       case 10:
-        PrintProducts("10. Ordenados por nombre alfabético", ProductQueries.OrdenadosPorNombre(products));
+        DisplayHelper.PrintProducts("10. Ordenados por nombre alfabético", ProductQueries.OrdenadosPorNombre(products));
         break;
 
       case 11:
-        PrintProducts("11. Ordenados por stock (mayor a menor)", ProductQueries.OrdenadosPorStockDesc(products));
+        DisplayHelper.PrintProducts("11. Ordenados por stock (mayor a menor)", ProductQueries.OrdenadosPorStockDesc(products));
         break;
 
       case 12:
-        PrintProducts("12. Top 5 productos más caros", ProductQueries.Top5MasCaros(products));
+        DisplayHelper.PrintProducts("12. Top 5 productos más caros", ProductQueries.Top5MasCaros(products));
         break;
 
       case 13:
-        PrintProducts("13. 10 productos con menor stock", ProductQueries.Top10MenorStock(products));
+        DisplayHelper.PrintProducts("13. 10 productos con menor stock", ProductQueries.Top10MenorStock(products));
         break;
 
       case 14:
-        PrintValue("14. Total de productos", ProductQueries.TotalProductos(products));
+        DisplayHelper.PrintValue("14. Total de productos", ProductQueries.TotalProductos(products));
         break;
 
       case 15:
-        PrintValue("15. Suma de todos los precios", $"${ProductQueries.SumaPrecios(products):F2}");
+        DisplayHelper.PrintValue("15. Suma de todos los precios", $"${ProductQueries.SumaPrecios(products):F2}");
         break;
 
       case 16:
-        PrintValue("16. Precio promedio", $"${ProductQueries.PrecioPromedio(products):F2}");
+        DisplayHelper.PrintValue("16. Precio promedio", $"${ProductQueries.PrecioPromedio(products):F2}");
         break;
 
       case 17:
-        PrintProduct("17. Producto más caro", ProductQueries.ProductoMasCaro(products));
+        DisplayHelper.PrintProduct("17. Producto más caro", ProductQueries.ProductoMasCaro(products));
         break;
 
       case 18:
-        PrintProduct("18. Producto más barato", ProductQueries.ProductoMasBarato(products));
+        DisplayHelper.PrintProduct("18. Producto más barato", ProductQueries.ProductoMasBarato(products));
         break;
 
       case 19:
-        PrintValue("19. ¿Existe algún producto con precio mayor a $1000?",
+        DisplayHelper.PrintValue("19. ¿Existe algún producto con precio mayor a $1000?",
           ProductQueries.HayProductoMayorA1000(products) ? "Sí" : "No");
         break;
 
       case 20:
-        PrintValue("20. ¿Todos los productos tienen stock mayor a 5?",
+        DisplayHelper.PrintValue("20. ¿Todos los productos tienen stock mayor a 5?",
           ProductQueries.TodosTienenStockMayorA5(products) ? "Sí" : "No");
         break;
 
       case 21:
-        PrintValue("21. Total de productos en la categoría Audio", ProductQueries.ContarProductosAudio(products));
+        DisplayHelper.PrintValue("21. Total de productos en la categoría Audio", ProductQueries.ContarProductosAudio(products));
         break;
 
       case 22:
-        PrintGroups("22. Productos agrupados por categoría", ProductQueries.AgruparPorCategoria(products));
+        DisplayHelper.PrintGroupsProductsByCategory("22. Productos agrupados por categoría", ProductQueries.AgruparPorCategoria(products));
         break;
 
       case 23:
-        PrintValue("23. Categoría con más productos", ProductQueries.CategoriaConMasProductos(products) ?? "N/A");
+        DisplayHelper.PrintValue("23. Categoría con más productos", ProductQueries.CategoriaConMasProductos(products) ?? "N/A");
         break;
 
       case 24:
-        PrintValue("24. Stock total de todos los productos", $"{ProductQueries.StockTotal(products):N0} unidades");
+        DisplayHelper.PrintValue("24. Stock total de todos los productos", $"{ProductQueries.StockTotal(products):N0} unidades");
         break;
 
       case 25:
-        PrintProduct("25. Producto con el nombre más largo", ProductQueries.ProductoNombreMasLargo(products));
+        DisplayHelper.PrintProduct("25. Producto con el nombre más largo", ProductQueries.ProductoNombreMasLargo(products));
         break;
 
       case 26:
-        PrintProduct("26. Producto con la descripción más corta", ProductQueries.ProductoDescripcionMasCorta(products));
+        DisplayHelper.PrintProduct("26. Producto con la descripción más corta", ProductQueries.ProductoDescripcionMasCorta(products));
         break;
 
       case 27:
-        PrintProducts("27. Descripción contiene 'pantalla'", ProductQueries.DescripcionContienePantalla(products));
+        DisplayHelper.PrintProducts("27. Descripción contiene 'pantalla'", ProductQueries.DescripcionContienePantalla(products));
         break;
 
       case 28:
-        PrintValue("28. Promedio de stock en Almacenamiento",
+        DisplayHelper.PrintValue("28. Promedio de stock en Almacenamiento",
           $"{ProductQueries.PromedioStockAlmacenamiento(products):F2} unidades");
         break;
 
@@ -226,57 +227,57 @@ static void ExecuteExercise(int option, List<Product> products)
         var dateResult = ProductQueries.CreadosEnFecha(products, date).ToList();
 
         if (dateResult.Count == 0)
-          PrintValue("29. Productos creados el " + date.ToString("dd/MM/yyyy"), "(ninguno en esa fecha)");
+          DisplayHelper.PrintValue("29. Productos creados el " + date.ToString("dd/MM/yyyy"), "(ninguno en esa fecha)");
         else
-          PrintProducts("29. Productos creados el " + date.ToString("dd/MM/yyyy"), dateResult);
+          DisplayHelper.PrintProducts("29. Productos creados el " + date.ToString("dd/MM/yyyy"), dateResult);
         break;
 
       case 30:
-        PrintProducts("30. Productos con ID par", ProductQueries.IdPar(products));
+        DisplayHelper.PrintProducts("30. Productos con ID par", ProductQueries.IdPar(products));
         break;
 
       case 31:
-        PrintProducts("31. Productos con ID impar", ProductQueries.IdImpar(products));
+        DisplayHelper.PrintProducts("31. Productos con ID impar", ProductQueries.IdImpar(products));
         break;
 
       case 32:
-        PrintProducts("32. Precio con decimal mayor a .50", ProductQueries.PrecioConDecimalMayorA50(products));
+        DisplayHelper.PrintProducts("32. Precio con decimal mayor a .50", ProductQueries.PrecioConDecimalMayorA50(products));
         break;
 
       case 33:
-        PrintProducts("33. Nombre con más de 10 caracteres", ProductQueries.NombreMasDe10Caracteres(products));
+        DisplayHelper.PrintProducts("33. Nombre con más de 10 caracteres", ProductQueries.NombreMasDe10Caracteres(products));
         break;
 
       case 34:
-        PrintProducts("34. Stock es número primo", ProductQueries.StockEsPrimo(products));
+        DisplayHelper.PrintProducts("34. Stock es número primo", ProductQueries.StockEsPrimo(products));
         break;
 
       case 35:
-        PrintProducts("35. Nombre contiene 'Pro'", ProductQueries.NombreContienePro(products));
+        DisplayHelper.PrintProducts("35. Nombre contiene 'Pro'", ProductQueries.NombreContienePro(products));
         break;
 
       case 36:
-        PrintProducts("36. Stock es múltiplo de 5", ProductQueries.StockMultiploDe5(products));
+        DisplayHelper.PrintProducts("36. Stock es múltiplo de 5", ProductQueries.StockMultiploDe5(products));
         break;
 
       case 37:
-        PrintProducts("37. Descripción con más de 20 caracteres", ProductQueries.DescripcionMasDe20Caracteres(products));
+        DisplayHelper.PrintProducts("37. Descripción con más de 20 caracteres", ProductQueries.DescripcionMasDe20Caracteres(products));
         break;
 
       case 38:
         var redondos = ProductQueries.PrecioRedondo(products).ToList();
         if (redondos.Count == 0)
-          PrintValue("38. Productos con precio redondo", "(ninguno en esta colección)");
+          DisplayHelper.PrintValue("38. Productos con precio redondo", "(ninguno en esta colección)");
         else
-          PrintProducts("38. Productos con precio redondo", redondos);
+          DisplayHelper.PrintProducts("38. Productos con precio redondo", redondos);
         break;
 
       case 39:
-        PrintProducts("39. Nombre con exactamente dos palabras", ProductQueries.NombreConDosPalabras(products));
+        DisplayHelper.PrintProducts("39. Nombre con exactamente dos palabras", ProductQueries.NombreConDosPalabras(products));
         break;
 
       case 40:
-        PrintValue("40. Productos que no pertenecen a 'General'",
+        DisplayHelper.PrintValue("40. Productos que no pertenecen a 'General'",
           $"{ProductQueries.ProductosQueNoSonGeneral(products)} productos");
         break;
 
@@ -286,60 +287,60 @@ static void ExecuteExercise(int option, List<Product> products)
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-//  MÉTODOS DE PRESENTACIÓN
-// ─────────────────────────────────────────────────────────────────────────────
+// // ─────────────────────────────────────────────────────────────────────────────
+// //  MÉTODOS DE PRESENTACIÓN
+// // ─────────────────────────────────────────────────────────────────────────────
 
-/// <summary>
-/// Imprime una colección de productos con su información principal.
-/// </summary>
-static void PrintProducts(string title, IEnumerable<Product> list)
-{
-    Console.WriteLine($"\n{title}:");
-    foreach (var p in list)
-        Console.WriteLine($"  - {p.Id}: {p.Name} | ${p.Price:F2} | Stock: {p.Stock} | {p.Category}");
-}
+// /// <summary>
+// /// Imprime una colección de productos con su información principal.
+// /// </summary>
+// static void PrintProducts(string title, IEnumerable<Product> list)
+// {
+//     Console.WriteLine($"\n{title}:");
+//     foreach (var p in list)
+//         Console.WriteLine($"  - {p.Id}: {p.Name} | ${p.Price:F2} | Stock: {p.Stock} | {p.Category}");
+// }
 
-/// <summary>
-/// Imprime un único producto. Muestra un aviso si el resultado es nulo.
-/// </summary>
-static void PrintProduct(string title, Product? product)
-{
-    Console.WriteLine($"\n{title}:");
-    if (product is null)
-        Console.WriteLine("  (ninguno)");
-    else
-        Console.WriteLine($"  - {product.Id}: {product.Name} | ${product.Price:F2} | Stock: {product.Stock} | {product.Category}");
-}
+// /// <summary>
+// /// Imprime un único producto. Muestra un aviso si el resultado es nulo.
+// /// </summary>
+// static void PrintProduct(string title, Product? product)
+// {
+//     Console.WriteLine($"\n{title}:");
+//     if (product is null)
+//         Console.WriteLine("  (ninguno)");
+//     else
+//         Console.WriteLine($"  - {product.Id}: {product.Name} | ${product.Price:F2} | Stock: {product.Stock} | {product.Category}");
+// }
 
-/// <summary>
-/// Imprime una colección de strings simples (ej. solo nombres).
-/// </summary>
-static void PrintStrings(string title, IEnumerable<string> list)
-{
-    Console.WriteLine($"\n{title}:");
-    foreach (var item in list)
-        Console.WriteLine($"  - {item}");
-}
+// /// <summary>
+// /// Imprime una colección de strings simples (ej. solo nombres).
+// /// </summary>
+// static void PrintStrings(string title, IEnumerable<string> list)
+// {
+//     Console.WriteLine($"\n{title}:");
+//     foreach (var item in list)
+//         Console.WriteLine($"  - {item}");
+// }
 
-/// <summary>
-/// Imprime los grupos de productos organizados por categoría,
-/// mostrando la clave del grupo y cuántos productos contiene.
-/// </summary>
-static void PrintGroups(string title, IEnumerable<IGrouping<string, Product>> groups)
-{
-    Console.WriteLine($"\n{title}:");
-    foreach (var group in groups.OrderBy(g => g.Key))
-        Console.WriteLine($"  - {group.Key}: {group.Count()} productos");
-}
+// /// <summary>
+// /// Imprime los grupos de productos organizados por categoría,
+// /// mostrando la clave del grupo y cuántos productos contiene.
+// /// </summary>
+// static void PrintGroups(string title, IEnumerable<IGrouping<string, Product>> groups)
+// {
+//     Console.WriteLine($"\n{title}:");
+//     foreach (var group in groups.OrderBy(g => g.Key))
+//         Console.WriteLine($"  - {group.Key}: {group.Count()} productos");
+// }
 
-/// <summary>
-/// Imprime un resultado escalar (número, bool, string, etc.).
-/// </summary>
-static void PrintValue(string title, object value)
-{
-    Console.WriteLine($"\n{title}: {value}");
-}
+// /// <summary>
+// /// Imprime un resultado escalar (número, bool, string, etc.).
+// /// </summary>
+// static void PrintValue(string title, object value)
+// {
+//     Console.WriteLine($"\n{title}: {value}");
+// }
 
 
 
