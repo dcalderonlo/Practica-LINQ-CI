@@ -10,7 +10,7 @@ public class ConsoleMenuService : IMenuService
   public void PrintMenu()
   {
     Console.WriteLine("\n╔════════════════════════════════════════════════════════════════════════════╗");
-    Console.WriteLine("║                           MENÚ DE EJERCICIOS                                ║");
+    Console.WriteLine("║                             MENÚ DE EJERCICIOS                             ║");
     Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════╝");
     Console.WriteLine(" 1.  Obtener todos los productos de la lista.");
     Console.WriteLine(" 2.  Obtener los nombres de todos los productos.");
@@ -52,6 +52,5 @@ public class ConsoleMenuService : IMenuService
     Console.WriteLine("38.  Obtener los productos cuyo precio sea un número redondo.");
     Console.WriteLine("39.  Obtener los productos que tengan exactamente dos palabras en su nombre.");
     Console.WriteLine("40.  Obtener la cantidad de productos que no pertenecen a la categoría General.");
-    Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════╝");
   }
 }
