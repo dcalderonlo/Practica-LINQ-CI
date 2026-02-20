@@ -1,6 +1,6 @@
-using Practica_LINQ_CI.Models;
+using Practica_LINQ_CI.src.Models;
 
-namespace Practica_LINQ_CI.Queries;
+namespace Practica_LINQ_CI.src.Queries;
 /// Contiene todos los métodos de consulta LINQ sobre la colección de productos.
 /// Cada método resuelve un ejercicio específico de forma aislada y reutilizable.
 public static class ProductQueries
@@ -17,7 +17,7 @@ public static class ProductQueries
   // Ejercicio 2: Obtener solo los nombres de todos los productos.
   public static IEnumerable<string> GetProductNames(List<Product> products) =>
     // Select proyecta cada objeto Product a una única propiedad string.
-    products.Select(p => p.Name);
+    products.Select(p => p.Name ?? string.Empty);
 
   // Ejercicio 3: Obtener los productos cuyo precio sea mayor a 500.
   public static IEnumerable<Product> GetPriceGT500(List<Product> products) =>
@@ -31,12 +31,12 @@ public static class ProductQueries
   // Ejercicio 5: Obtener los productos de la categoría "Electrónica".
   public static IEnumerable<Product> GetElectronicsCat(List<Product> products) =>
     // StringComparison.OrdinalIgnoreCase hace la comparación insensible a mayúsculas.
-    products.Where(p => p.Category.Equals("Electrónica", StringComparison.OrdinalIgnoreCase));
+    products.Where(p => p.Category != null && p.Category.Equals("Electrónica", StringComparison.OrdinalIgnoreCase));
 
   // Ejercicio 6: Obtener los productos cuyo nombre comience con la letra 'L'.
   public static IEnumerable<Product> GetNameStarL(List<Product> products) =>
     // StartsWith evalúa el prefijo del string de forma eficiente.
-    products.Where(p => p.Name.StartsWith("L", StringComparison.OrdinalIgnoreCase));
+    products.Where(p => p.Name != null && p.Name.StartsWith("L", StringComparison.OrdinalIgnoreCase));
 
   // ─────────────────────────────────────────────────────────────────────────
   //  SECCIÓN 2 – FILTROS DE RANGO Y ORDENAMIENTO (Ejercicios 7–11)
@@ -118,18 +118,18 @@ public static class ProductQueries
 
   // Ejercicio 21: Contar cuántos productos hay en la categoría "Audio".
   public static int GetAudioCount(List<Product> products) =>
-    products.Count(p => p.Category.Equals("Audio", StringComparison.OrdinalIgnoreCase));
+    products.Count(p => p.Category != null && p.Category.Equals("Audio", StringComparison.OrdinalIgnoreCase));
 
   // Ejercicio 22: Agrupar los productos por categoría.
   public static IEnumerable<IGrouping<string, Product>> GetGroupByCategory(List<Product> products) =>
     // GroupBy devuelve IGrouping donde cada grupo tiene una clave (categoría)
     // y una colección de los productos que pertenecen a ella.
-    products.GroupBy(p => p.Category);
+    products.GroupBy(p => p.Category ?? "Sin Categoría");
 
   // Ejercicio 23: Obtener la categoría con más productos.
   public static string? GetCatMostProducts(List<Product> products) =>
     products
-      .GroupBy(p => p.Category)
+      .GroupBy(p => p.Category ?? "Sin Categoría")
       .MaxBy(grupo => grupo.Count())
       ?.Key;
 
@@ -143,31 +143,31 @@ public static class ProductQueries
 
   // Ejercicio 25: Obtener el producto con el nombre más largo.
   public static Product? GetLongestName(List<Product> products) =>
-    products.MaxBy(p => p.Name.Length);
+    products.MaxBy(p => p.Name?.Length ?? 0);
 
   // Ejercicio 26: Obtener el producto con la descripción más corta.
   public static Product? GetShortestDesc(List<Product> products) =>
-    products.MinBy(p => p.Description.Length);
+    products.MinBy(p => p.Description?.Length ?? int.MaxValue);
 
   // Ejercicio 27: Filtrar los productos cuya descripción contenga la palabra "pantalla".
   public static IEnumerable<Product> GetDescContainingScreen(List<Product> products) =>
     // Contains con StringComparison permite búsqueda insensible a mayúsculas.
-    products.Where(p => p.Description.Contains("pantalla", StringComparison.OrdinalIgnoreCase));
+    products.Where(p => p.Description != null && p.Description.Contains("pantalla", StringComparison.OrdinalIgnoreCase));
 
   // Ejercicio 33: Obtener los productos cuyo nombre tenga más de 10 caracteres.
   public static IEnumerable<Product> GetNameLongerThan10Chars(List<Product> products) =>
-    products.Where(p => p.Name.Length > 10);
+    products.Where(p => p.Name != null && p.Name.Length > 10);
 
   // Ejercicio 35: Obtener los productos cuyo nombre contenga la palabra "Pro".
   public static IEnumerable<Product> GetNameContainingPro(List<Product> products) =>
-    products.Where(p => p.Name.Contains("Pro", StringComparison.OrdinalIgnoreCase));
+    products.Where(p => p.Name != null && p.Name.Contains("Pro", StringComparison.OrdinalIgnoreCase));
 
   // Ejercicio 39: Obtener los productos que tengan exactamente dos palabras en su nombre.
   public static IEnumerable<Product> GetNameWithTwoWords(List<Product> products) =>
     products.Where(p =>
       // Split divide el nombre en partes usando espacios y contamos los fragmentos no vacíos;
       // RemoveEmptyEntries ignora espacios extra.
-      p.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length == 2);
+      p.Name != null && p.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length == 2);
 
   // ─────────────────────────────────────────────────────────────────────────
   //  SECCIÓN 7 – CONSULTAS NUMÉRICAS Y MATEMÁTICAS (Ejercicios 28–32, 34, 36, 38)
@@ -177,7 +177,7 @@ public static class ProductQueries
   public static double GetAvgStockStorage(List<Product> products) =>
     products
       // Filtramos primero con Where y luego calculamos el promedio con Average.
-      .Where(p => p.Category.Equals("Almacenamiento", StringComparison.OrdinalIgnoreCase))
+      .Where(p => p.Category != null && p.Category.Equals("Almacenamiento", StringComparison.OrdinalIgnoreCase))
       .Average(p => p.Stock);
 
   // Ejercicio 29: Obtener los productos creados en una fecha específica.
@@ -208,7 +208,7 @@ public static class ProductQueries
 
   // Ejercicio 37: Obtener los productos con descripción de más de 20 caracteres.
   public static IEnumerable<Product> GetDescLTChar20(List<Product> products) =>
-    products.Where(p => p.Description.Length > 20);
+    products.Where(p => p.Description != null && p.Description.Length > 20);
 
   // Ejercicio 38: Obtener los productos cuyo precio sea un número redondo (sin decimales).
   public static IEnumerable<Product> GetRoundPrice(List<Product> products) =>
@@ -220,7 +220,7 @@ public static class ProductQueries
 
   // Ejercicio 40: Obtener la cantidad de productos que no pertenecen a "General".
   public static int GetNotInGeneralCat(List<Product> products) =>
-    products.Count(p => !p.Category.Equals("General", StringComparison.OrdinalIgnoreCase));
+    products.Count(p => p.Category != null && !p.Category.Equals("General", StringComparison.OrdinalIgnoreCase));
 
   // ─────────────────────────────────────────────────────────────────────────
   //  MÉTODOS AUXILIARES PRIVADOS

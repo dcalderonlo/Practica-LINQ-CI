@@ -1,11 +1,17 @@
-namespace Practica_LINQ_CI.src.Helpers;
-// Contiene los métodos relacionados con la presentación del menú en consola.
-internal static class MenuHelper
+using Practica_LINQ_CI.src.Interfaces;
+
+namespace Practica_LINQ_CI.src.Services;
+
+// Implementación concreta del servicio de menú en consola.
+// Aplicación de SRP (Single Responsibility Principle) - solo maneja el menú.
+// Implementa IMenuService para DIP (Dependency Inversion Principle).
+public class ConsoleMenuService : IMenuService
 {
-  // Imprime en consola la lista de todos los ejercicios disponibles.
-  public static void PrintMenu()
+  public void PrintMenu()
   {
-    Console.WriteLine("\n--- Menú de ejercicios ---");
+    Console.WriteLine("\n╔════════════════════════════════════════════════════════════════════════════╗");
+    Console.WriteLine("║                           MENÚ DE EJERCICIOS                                ║");
+    Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════╝");
     Console.WriteLine(" 1.  Obtener todos los productos de la lista.");
     Console.WriteLine(" 2.  Obtener los nombres de todos los productos.");
     Console.WriteLine(" 3.  Obtener los productos cuyo precio sea mayor a 500.");
@@ -34,7 +40,7 @@ internal static class MenuHelper
     Console.WriteLine("26.  Obtener el producto con la descripción más corta.");
     Console.WriteLine("27.  Filtrar productos cuya descripción contenga la palabra 'pantalla'.");
     Console.WriteLine("28.  Obtener el promedio de stock de la categoría Almacenamiento.");
-    Console.WriteLine("29.  Obtener los productos creados en una fecha específica (20/12/2022).");
+    Console.WriteLine("29.  Obtener los productos creados en una fecha específica.");
     Console.WriteLine("30.  Obtener los productos cuya ID sea par.");
     Console.WriteLine("31.  Obtener los productos cuya ID sea impar.");
     Console.WriteLine("32.  Obtener los productos cuyo precio tenga un decimal mayor a .50.");
@@ -46,5 +52,6 @@ internal static class MenuHelper
     Console.WriteLine("38.  Obtener los productos cuyo precio sea un número redondo.");
     Console.WriteLine("39.  Obtener los productos que tengan exactamente dos palabras en su nombre.");
     Console.WriteLine("40.  Obtener la cantidad de productos que no pertenecen a la categoría General.");
+    Console.WriteLine("╚════════════════════════════════════════════════════════════════════════════╝");
   }
 }

@@ -1,6 +1,6 @@
-using Practica_LINQ_CI.Models;
+using Practica_LINQ_CI.src.Models;
 
-namespace Practica_LINQ_CI.Helpers;
+namespace Practica_LINQ_CI.src.Helpers;
 // Contiene los métodos de presentación para imprimir resultados en consola.
 internal static class DisplayHelper
 {

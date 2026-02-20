@@ -1,9 +1,14 @@
+using Practica_LINQ_CI.src.Interfaces;
 using Practica_LINQ_CI.src.Models;
 
-namespace Practica_LINQ_CI.src.Data;
-public static class ProductMocks
+namespace Practica_LINQ_CI.src.Services;
+
+// Implementación concreta de la fuente de datos de productos usando mocks.
+// Aplicación de SRP (Single Responsibility Principle) - solo provee datos.
+// Implementa IProductDataSource para DIP (Dependency Inversion Principle).
+public class MockProductDataSource : IProductDataSource
 {
-  public static List<Product> GetProducts() =>
+  public List<Product> GetProducts() =>
   [
     new Product { Id = 1, Name = "Laptop UltraSlim 15", Description = "Laptop delgado con pantalla FHD de 15 pulgadas y procesador de última generación.", Price = 1299.99m, Stock = 45, Category = "Electrónica", CreatedAt = new DateTime(2024, 1, 10) },
     new Product { Id = 2, Name = "Mouse Inalámbrico Pro", Description = "Mouse ergonómico inalámbrico con batería de larga duración y DPI ajustable.", Price = 49.99m, Stock = 200, Category = "Accesorios", CreatedAt = new DateTime(2024, 1, 12) },
